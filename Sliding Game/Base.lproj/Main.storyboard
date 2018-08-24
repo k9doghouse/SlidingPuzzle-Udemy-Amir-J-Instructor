@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sliding_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" restorationIdentifier="gameView" translatesAutoresizingMaskIntoConstraints="NO" id="CaE-6E-fZX">
+                                <rect key="frame" x="20" y="40" width="374" height="374"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CaE-6E-fZX" secondAttribute="height" multiplier="1:1" id="eni-Do-kkK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WX-yb-xBJ">
+                                <rect key="frame" x="20" y="422" width="372" height="52"/>
+                                <color key="backgroundColor" red="0.2324797511100769" green="0.53815203905105591" blue="0.45185244083404541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="D6w-Eh-SjZ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="372" id="WOI-Tv-0Po"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="0.95530194040000005" green="0.9972025752" blue="0.86936730149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Skb-kh-gYi">
+                                <rect key="frame" x="20" y="482" width="372" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="372" id="th4-F4-lfE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vW8-aP-p7H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="tintColor" red="0.95530194040000005" green="0.9972025752" blue="0.86936730149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.95530194040000005" green="0.9972025752" blue="0.86936730149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2NI-aN-n4e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95530194040000005" green="0.9972025752" blue="0.86936730149999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9WX-yb-xBJ" secondAttribute="trailing" constant="22" id="AbS-AX-Rpx" userLabel="Safe Area.trailing = Timer Label.trailing + 20"/>
+                            <constraint firstItem="CaE-6E-fZX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GkP-ep-Lq9"/>
+                            <constraint firstItem="CaE-6E-fZX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UTt-Fh-5JE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Skb-kh-gYi" secondAttribute="trailing" constant="22" id="aPl-4p-jvd" userLabel="Safe Area.trailing = Reset.trailing + 20"/>
+                            <constraint firstItem="9WX-yb-xBJ" firstAttribute="top" secondItem="CaE-6E-fZX" secondAttribute="bottom" constant="8" id="e14-yd-m6s"/>
+                            <constraint firstItem="Skb-kh-gYi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="m0W-Hs-Ozf"/>
+                            <constraint firstItem="9WX-yb-xBJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mVp-Ho-7r1"/>
+                            <constraint firstItem="CaE-6E-fZX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="oMw-do-xjD"/>
+                            <constraint firstItem="Skb-kh-gYi" firstAttribute="top" secondItem="9WX-yb-xBJ" secondAttribute="bottom" constant="8" id="s8a-t6-4QE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="gameView" destination="CaE-6E-fZX" id="zd2-Pc-EFG"/>
+                        <outlet property="timerLabel" destination="9WX-yb-xBJ" id="hOL-9C-Sme"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="24.456521739130437"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
